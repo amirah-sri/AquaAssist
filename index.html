@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Conservation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f8f8;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .chatbot-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .chatbot-body {
+            padding: 10px;
+            height: calc(100% - 40px);
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "e273a410-e016-4888-a51e-b0ef92731ccf", // The ID of this integration.
+    region: "us-south", // The region your integration is hosted in.
+    serviceInstanceID: "e3702101-11cf-465f-ae80-cec9a1211d22", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Water Conservation</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tips">Conservation Tips</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#importance">Importance</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#initiatives">Initiatives</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container content" id="home">
+        <div class="jumbotron">
+            <h1>Welcome to Aqua Savers</h1>
+            <p>Learn how you can save water and make a difference.</p>
+            <img src="https://github.com/amirah-sri/AquaAssist/blob/main/banner.jpg?raw=true" alt="Water Conservation" style="width: 900; height: 300;">
+        </div>
+    </div>
+
+
+    <div class="container content" id="tips">
+    <h2>Water Conservation Tips</h2>
+    <div class="section">
+        <h3>Indoor Tips</h3>
+        <ul>
+            <li> <h6>Fix leaks promptly</h6>: Repair dripping faucets, showerheads, and leaking toilets. A single drip per second can waste over 3,000 gallons of water annually.</li>
+            <li><h6>Install water-saving fixtures</h6>: Use low-flow showerheads, faucet aerators, and water-efficient toilets to reduce water usage by up to 50%.</li>
+            <li><h6>Efficient dishwashing</h6>: When washing dishes by hand, fill the sink instead of running the tap. Use a dishwasher only when it’s fully loaded.</li>
+            <li><h6>Laundry practices</h6>: Wash full loads of laundry or adjust the water level settings for smaller loads. Consider upgrading to a high-efficiency washing machine.</li>
+            <li><h6>Mindful personal hygiene</h6>: Turn off the tap while brushing teeth, shaving, or washing hands. Take shorter showers and consider using a water-saving shower timer.</li>
+        </ul>
+        <h3>Outdoor Tips</h3>
+        <ul>
+            <li><h6>Water plants wisely</h6>: Water your garden during the early morning or late evening to minimize evaporation. Use a drip irrigation system to deliver water directly to the roots.</li>
+            <li><h6>Choose native plants</h6>: Opt for drought-resistant and native plants that require less water and maintenance. Group plants with similar water needs together.</li>
+            <li><h6>Mulch your garden</h6>: Apply mulch around plants to retain soil moisture, reduce evaporation, and suppress weeds.</li>
+            <li><h6>Rainwater harvesting</h6>: Install rain barrels or a rainwater harvesting system to collect and store rainwater for watering plants and lawns.</li>
+            <li><h6>Efficient lawn care</h6>: Set lawnmowers to a higher setting to encourage deeper root growth, which requires less watering. Use a broom instead of a hose to clean driveways and sidewalks.</li>
+        </ul>
+       <img src="https://www.homeadviceguide.com/images/waterconservation.jpg" alt="Water Conservation Tips">
+    </div>
+</div>
+
+
+    <div class="container content" id="importance">
+    <div class="container content" id="importance">
+    <h2>Importance of Water Conservation</h2>
+    <div class="section">
+        <p>Water is a precious resource that is essential for all living beings. The importance of water conservation cannot be overstated, as it helps ensure the sustainability of our environment and the availability of clean water for future generations. Here are some key reasons why conserving water is crucial:</p>
+
+        <h3>1. Environmental Sustainability</h3>
+        <ul>
+            <li><strong>Protecting Ecosystems:</strong> Many ecosystems, including wetlands, rivers, and lakes, rely on sufficient water levels to sustain the plants and animals that live there. Conserving water helps maintain these ecosystems and biodiversity.</li>
+            <li><strong>Reducing Pollution:</strong> Less water usage means reduced runoff and wastewater that can carry pollutants into natural water bodies. This helps in maintaining cleaner water sources.</li>
+        </ul>
+
+        <h3>2. Resource Preservation</h3>
+        <ul>
+            <li><strong>Finite Resource:</strong> Only 2.5% of the Earth's water is freshwater, and a significant portion of that is locked in glaciers and ice caps. This makes the accessible fresh water a limited and valuable resource.</li>
+            <li><strong>Climate Change:</strong> As climate change impacts weather patterns, some regions experience more droughts, making water conservation even more critical to adapt to these changes.</li>
+        </ul>
+
+        <h3>3. Economic Benefits</h3>
+        <ul>
+            <li><strong>Cost Savings:</strong> Using less water can lead to lower utility bills for households and businesses. It also reduces the need for expensive infrastructure projects to supply and treat water.</li>
+            <li><strong>Agricultural Efficiency:</strong> Agriculture is one of the largest consumers of water. Implementing water-saving techniques can help farmers reduce costs and increase crop yields.</li>
+        </ul>
+
+        <h3>4. Energy Conservation</h3>
+        <ul>
+            <li><strong>Water-Energy Nexus:</strong> The process of extracting, treating, and transporting water requires significant amounts of energy. By conserving water, we can also reduce energy consumption and lower greenhouse gas emissions.</li>
+        </ul>
+
+        <h3>5. Social Responsibility</h3>
+        <ul>
+            <li><strong>Global Access:</strong> Many parts of the world face severe water shortages. By conserving water, we can contribute to global efforts to ensure that everyone has access to clean and safe drinking water.</li>
+            <li><strong>Community Engagement:</strong> Water conservation can foster a sense of community as individuals and organizations come together to promote and practice sustainable water use.</li>
+        </ul>
+
+        <p>By understanding and appreciating the importance of water conservation, we can take proactive steps to protect this vital resource. Simple actions like fixing leaks, using water-efficient appliances, and adopting mindful water usage habits can collectively make a significant impact.</p>
+        <img src="https://www.shutterstock.com/image-vector/world-water-day-march-save-260nw-1243861330.jpg" alt="Importance of Water Conservation"style="max-width:100%; height: auto;>
+
+    </div>
+</div>
+
+
+    <div class="container content" id="initiatives">
+        <h2>Water Conservation Initiatives</h2>
+        <div class="section">
+            <h3>Community Programs</h3>
+            <p>Join our community programs aimed at promoting water conservation in your neighborhood. Participate in tree planting, rainwater harvesting workshops, and community clean-up drives.</p>
+            <h3>AquaAssist Chatbot</h3>
+            <p>Meet AquaAssist, our water conservation chatbot! AquaAssist is here to provide you with tips, answer your questions, and help you understand more about water conservation. Interact with AquaAssist directly on our website using the chatbot interface below. You can also join our <a href="https://t.me/AquaAssist" target="_blank">Telegram Channel</a> to connect with like-minded individuals and stay updated on the latest water conservation initiatives.</p>
+            <img src="https://images.unsplash.com/photo-1483691278019-cb7253bee49f?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Community Programs">
+
+        </div>
+    </div>
+
+    <div class="container content" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: 2101109368_etc@pmec.ac.in</p>
+        <p>Email: 2101109360_etc@pmec.ac.in</p>
+        <p>Email: 2101109349_etc@pmec.ac.in</p>
+       <p>Email: 2101109356_etc@pmec.ac.in</p>
+        <p>Telegram:<a href="https://t.me/AquaAssist" target="_blank">Telegram Channel</a> </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 INTELLIBOTS. All rights reserved.</p>
+    </footer>
+
+        <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
